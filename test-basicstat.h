@@ -18,6 +18,9 @@ private slots:
     void test_pecentile_invalidParameter();
     void test_correlationCoefficient();
     void test_correlationCoefficient_invalidParameter();
+
+    void test_variance_inputOneData();
+    void test_standardDeviation_inputOneData();
 };
 
 #endif // MULTIVARIATEANAL_H

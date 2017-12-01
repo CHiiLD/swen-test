@@ -151,3 +151,23 @@ void FoundationStatTest::test_correlationCoefficient_invalidParameter()
     ret = FoundationStat::correlationCoefficient(datax, datay, value); //데이터 셋 사이즈 검사
     QCOMPARE(ret, -1);
 }
+
+void FoundationStatTest::test_variance_inputOneData()
+{
+    std::list<double> data;
+    data.push_back(3.0);
+    double variance;
+    int ret = FoundationStat::variance(data, variance);
+    QCOMPARE(ret, 0);
+    QCOMPARE(variance, 0.0);
+}
+
+void FoundationStatTest::test_standardDeviation_inputOneData()
+{
+    std::list<double> data;
+    data.push_back(3.0);
+    double variance;
+    int ret = FoundationStat::standardDeviation(data, variance);
+    QCOMPARE(ret, 0);
+    QCOMPARE(variance, 0.0);
+}
